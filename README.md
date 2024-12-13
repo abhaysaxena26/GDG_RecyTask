@@ -1,1 +1,2 @@
-# GDG_RecyTask
+Hi
+For this project, I used various CSS features such as flexbox for layout, media queries to make the design responsive, and CSS animations to add effects like fading and scaling for interactive elements. I also implemented a countdown timer using JavaScript, where the remaining time until the new year is displayed dynamically. Despite my efforts to make the page responsive using media queries, it doesn’t work as expected on all devices, but I did my best to ensure it adapts to different screen sizes. Thank you!
