@@ -1,0 +1,208 @@
+*{
+    margin : 0%;
+    padding : 0%;
+    box-sizing : border-box;
+}
+body,html{
+    height : 100%;
+    width : 100%;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: whitesmoke;
+}
+header{
+    padding: 15px;
+    background: linear-gradient(90deg, #001f3f, #00509e);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+header:hover {
+    transform: scale(1); 
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4); 
+}
+.container{
+    display: flex;
+    height: 90.8vh;
+}
+.countdown{
+    width: 62%;
+    background-image: url('newYearBackg2.jpg');
+    background-position: center;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: space-between;
+    padding: 10px; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s;
+}
+.countdown h1{
+    font-size: 3.5rem;
+    margin-top: 75px;
+    font-family: 'Courier New', Courier, monospace;
+}
+#countdownTimer{
+    font-size: 2.5em;
+    word-spacing: 100px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+span{
+    margin-top: -100px;
+    word-spacing: 22px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#preview {
+    background-color: #ff4f4f;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.4em;
+    cursor: pointer;
+    transition: transform 0.5s ease, background-color 0.5s ease;
+    margin-bottom: 190px; 
+}
+#preview:hover {
+    transform: scale(1.1);
+    background-color: #ff2d2d;
+}
+#message {
+    position: absolute; 
+    font-size: 2em;
+    font-weight: bold;
+    color: #ffffff; 
+    text-align: center;
+    margin-top: 1px;
+    opacity: 0; 
+    transform: translateY(20px); 
+    transition: opacity 0.3s ease, transform 0.3s ease; 
+    width: 100%; 
+    top: 80%;
+}  
+#message.hidden{
+    display: none; 
+}
+.animated-message {
+    display: block;
+    opacity: 1;
+    animation: fadeInUp 3s ease-in-out forwards;
+}
+
+@keyframes fadeInUp{
+    0%{
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    50%{
+      opacity: 1;
+      transform: translateY(-10px);
+    }
+    100%{
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+}
+.portfolio{
+    height: 100% ;
+    width: 40%;
+    padding: 20px;
+    background: linear-gradient(180deg, #00274d, #00509e);
+    transition: transform 0.3s ease, background-color 0.3s;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    gap: 15px;
+}
+.portfolio span{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #4fc3dc;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #4fc3dc, 0 0 20px #4fc3dc, 0 0 40px #4fc3dc;
+    animation: animate 10s linear infinite;
+    animation-duration: calc(5s + var(--i) * 1s); 
+    left: calc(var(--i) * 10%); 
+}
+.photo{
+    height: 240px;
+    width: 210px;
+    border-radius: 50%;
+    border: 5px solid #ffffff;
+    margin-bottom: 10px; 
+}
+.portfolio  h2{
+    font-size: 1.8em;
+} 
+.portfolio  p{
+    font-size: 1.3em;
+    line-height: 1.5;
+}
+
+@keyframes sparkle {
+    0% { box-shadow: 0 0 5px #00509e; }
+    50% { box-shadow: 0 0 20px #00c8ff; }
+    100% { box-shadow: 0 0 5px #00509e; }
+}
+
+header{
+    animation: sparkle 3s infinite;
+}
+@keyframes animate {
+    0% {
+        transform: translateY(50vh) scale(0); 
+    }
+    100% {
+        transform: translateY(-60vh) scale(1); 
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; 
+        height: auto; 
+    }
+
+    .countdown, .portfolio {
+        width: 100%; 
+        
+    }
+
+    #preview {
+        margin-bottom: 20px; 
+    }
+
+    .portfolio {
+        padding: 10px;
+    }
+
+    .portfolio span {
+        display: none;
+    }
+
+    .photo {
+        height: 200px; 
+        width: 180px;
+    }
+
+    .portfolio p {
+        font-size: 1.1em;
+    }
+
+    .countdown h1 {
+        font-size: 2.5rem;
+    }
+
+    #countdownTimer {
+        font-size: 1.8em; 
+        word-spacing: 50px; 
+    }
+
+    span {
+        word-spacing: 10px; 
+    }
+}
